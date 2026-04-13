@@ -7,13 +7,18 @@ public class Costumer {
 	int number;
 	double balance;
 
-	public Costumer() {
+    public Costumer() {
+    }
 
+    public Costumer(String name, int number) {
+        this.name = name;
+        this.number = number;
 	}
 
-	public Costumer(String name, int number) {
+	public Costumer(String name, int number, double initialDeposit) {
 		this.name = name;
 		this.number = number;
+        deposit(initialDeposit);
 	}
 
 	public void Status() {
@@ -22,7 +27,6 @@ public class Costumer {
 
 	public void initial(double value) {
 			setBalance(value);
-			Status();
 	}
 	
 	public void deposit(double value) {
@@ -33,7 +37,7 @@ public class Costumer {
 
 	public void withdraw(double value) {
 		if(value > 0) {balance -= value + 5.0;}
-		System.out.println("Updated number data: ");
+		System.out.println("Updated number data with tax: ");
 		Status();
 	}
 
