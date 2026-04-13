@@ -6,7 +6,6 @@ public class Test {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
 		Employee e = new Employee();
-		double percentage = 0;
 		
 		// Informando os dados a serem lidos
 		System.out.println("Name: ");
@@ -20,11 +19,13 @@ public class Test {
 		e.setTax(tax);
 		
 		System.out.println("Employee: " + name + " $ " + e.Netsalary() );
-		
+
+        System.out.println("Which percentage to increase salary? ");
+        double percentage = sc.nextDouble();
+
 		e.increaseSalary(percentage);
 		
 		
 		sc.close();
-
 	}
 	}

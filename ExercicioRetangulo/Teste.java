@@ -13,7 +13,7 @@ public class Teste {
 		
 		System.out.println("Area: " + r.area()); 
 		System.out.println("Perimeter: " + r.perimeter()); 
-		System.out.println("Diagonal: " + r.diagonal()); 
+		System.out.printf("Diagonal: %.2f", r.diagonal());
 		
 		leia.close();
 	}

@@ -21,15 +21,9 @@ public class Employee {
 	}
 	
 	public void increaseSalary(double percentage) {
-		Scanner leia = new Scanner(System.in);
-		System.out.println("Which percentage to increase salary? ");
-		percentage = leia.nextDouble();
-		double increasedSalary = Netsalary() + (grossSalary*percentage/100);
-		
-		System.out.println("Updated data: " + name + " , " + "$ " + increasedSalary);
-
-		leia.close();
-			}
+        double increasedSalary = Netsalary() + (grossSalary * percentage / 100);
+        System.out.println("Updated data: " + name + " , " + "$ " + increasedSalary);
+    }
 
 	public String getName() {
 		return name;
