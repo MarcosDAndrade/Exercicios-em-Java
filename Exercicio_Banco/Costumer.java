@@ -20,39 +20,21 @@ public class Costumer {
 		System.out.println("Number " + number + ", " + "Holder: " + name + ", " + "Balance: $" + balance);
 	}
 
-	public void initial() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Is there na initial deposit (y/n)?");
-		char opc = sc.next().charAt(0);
-		if (opc == 'y') {
-			System.out.println("Enter Initial Value: ");
-			double value = sc.nextDouble();
+	public void initial(double value) {
 			setBalance(value);
 			Status();
-		} else {
-			Status();
-		}
-		sc.close();
 	}
 	
-	public void deposit() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter deposit value data: ");
-		double value = sc.nextDouble();
+	public void deposit(double value) {
 		balance += value;
 		System.out.println("Updated number data: ");
 		Status();
-		sc.close();
 	}
 
-	public void withdraw() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter withdraw value data: ");
-		double value = sc.nextDouble();
+	public void withdraw(double value) {
 		if(value > 0) {balance -= value + 5.0;}
 		System.out.println("Updated number data: ");
 		Status();
-		sc.close();
 	}
 
 	public String getName() {
